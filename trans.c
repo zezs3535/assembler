@@ -9,7 +9,7 @@ int instr_trans(char *op, char *args, char* mcode)
 	}
 
 
-	strcpy(mcode, "AB CD EF");
+	strcpy(mcode, "BB CD EF");
 
 	/********************************/
     /*  							*/
