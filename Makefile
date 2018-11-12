@@ -9,4 +9,5 @@ trans.o:
 check.o:
 	gcc -c check.c
 
-
+myas:
+	gcc -o myas main.o check.o trans.o
