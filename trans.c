@@ -12,7 +12,7 @@ int what_ins(char *ptr){
 	else if(ptr[0]=='-'){ //memory
 		return 3;
 	}
-	else if(ptr[0]=='0'){
+	else if(ptr[0]=='0'){ //memory with disp.
 		return 4;
 	}
 

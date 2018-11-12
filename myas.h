@@ -8,4 +8,4 @@ int is_valid(char *op, char *args);
 
 int instr_trans(char *op, char *args, char *mcode);
 
-
+int what_ins(char *tok1);
