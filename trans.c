@@ -14,22 +14,24 @@ int what_ins(char *ptr){
 	else if(ptr[0]=='0'){ //memory
 		return 4;
 	}
-
+	else{
+		return 0;
+	}
 }
 
 int instr_trans(char *op, char *args, char* mcode)
 {
 	
-	int j=0;
-	int a,b;
-	char c;
+	int a=0,b=0;
+	char c=0;
 	char *tok1,*tok2;
 	// check syntax 
 	if(!is_valid(op, args)){
 		printf("Error: %s %s is not valid\n", op, args);
 		return 0;
 	}
-	
+	tok1=(char*)malloc(sizeof(char)*10);
+	tok2=(char*)malloc(sizeof(char)*10);
 	tok1=strtok(args,",");
 	tok2=strtok(NULL,",");
 	a=what_ins(tok1);

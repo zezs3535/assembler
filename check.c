@@ -4,9 +4,11 @@ int is_valid(char *op, char *args)
 {
 	//if valid return 1, else 0
 
-	int a,b;
+	int a=0,b=0;
 	int j=0;
 	char *tok1, *tok2;
+	tok1=(char*)malloc(sizeof(char)*10);
+	tok2=(char*)malloc(sizeof(char)*10);
 	tok1=strtok(args,",");
 	tok2=strtok(NULL,",");
 	a=what_ins(tok1);
