@@ -1,5 +1,6 @@
 #include "myas.h"
 
+
 int main(int argc, char* argv[])
 {
 	char ifname[20];
@@ -22,8 +23,10 @@ int main(int argc, char* argv[])
 	mcode = (char*) malloc (sizeof(char)*20);
 
 	while (!feof(ifp)){
-		fscanf(ifp, "%s %s\n", op, args);
-
+		if(fscanf(ifp, "%s %s\n", op, args)==2){
+			
+		}
+	
 		// translate assembly into machine-code 
 		if(!instr_trans(op, args, mcode)){
 			printf("Error: %s %s cannot be translated\n", op, args);
@@ -31,7 +34,7 @@ int main(int argc, char* argv[])
 		}
 		fprintf(ofp, "%s\n", mcode);
 	}
-
+	
 	free(mcode);
 	fclose(ifp);
 	fclose(ofp);

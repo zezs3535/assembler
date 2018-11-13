@@ -1,13 +1,15 @@
 # Write this Makefile
 
-main.o:
-	gcc -c main.c
+myas: trans.o check.o main.o
+	gcc -o myas trans.o check.o main.o
 
-trans.o:
+trans.o: trans.c
 	gcc -c trans.c
 
-check.o:
+check.o: check.c
 	gcc -c check.c
 
-myas:
-	gcc -o myas main.o check.o trans.o
+main.o: main.c
+	gcc -c main.c
+
+

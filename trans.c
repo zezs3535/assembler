@@ -19,7 +19,7 @@ int what_ins(char *ptr){
 
 int instr_trans(char *op, char *args, char* mcode)
 {
-	char i;
+	
 	int j=0;
 	int a,b;
 	char c;

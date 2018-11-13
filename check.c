@@ -4,7 +4,7 @@ int is_valid(char *op, char *args)
 {
 	//if valid return 1, else 0
 
-	char i;
+	int a,b;
 	int j=0;
 	char *tok1, *tok2;
 	tok1=strtok(args,",");
